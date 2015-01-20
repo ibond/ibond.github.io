@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Ian Bond]]></title>
+        <description><![CDATA[Ian Bond]]></description>
+        <link>http://www.ianbond.net</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 20 Jan 2015 18:09:46 GMT</lastBuildDate>
+        <atom:link href="http://www.ianbond.net/rss.xml" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Ian Bond]]></author>
+        <pubDate>Tue, 20 Jan 2015 18:09:41 GMT</pubDate>
+        <item>
+            <title><![CDATA[Adding DNS Entries on the Asus RT-AC68U/RT-AC68R]]></title>
+            <description><![CDATA[<p>This is how I was able to add local DNS entries on my Asus RT-AC68R.</p>
+<ul>
+<li>Install AsusWrt-Merlin firmware: <a href="https://github.com/RMerl/asuswrt-merlin">https://github.com/RMerl/asuswrt-merlin</a></li>
+<li>SSH into router</li>
+<li>&quot;vi /jffs/configs/dnsmasq.conf.add&quot;</li>
+<li>add line &quot;address=/hostname.domain/192.168.1.X&quot;</li>
+</ul>
+]]></description>
+            <link>http://www.ianbond.net/notes/setting_dns_entries_ac68.html</link>
+            <guid isPermaLink="true">http://www.ianbond.net/notes/setting_dns_entries_ac68.html</guid>
+            <dc:creator><![CDATA[Ian Bond]]></dc:creator>
+            <pubDate>Tue, 20 Jan 2015 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GitHub Pages CNAME File]]></title>
+            <description><![CDATA[<p>This took me too long to figure out.</p>
+<p>I was unable to get my custom domain working with GitHub Pages; whenever I attempted to go to my site via the custom domain I would get a GitHub Pages 404.</p>
+<p>Turns out I had saved my CNAME file as unicode and there was a byte order mark at the beginning.  Re-saving it as as an ANSI file and waiting ~15 minutes for GitHub to pick up the change did the trick.</p>
+<p>It also may be that:</p>
+<ol>
+<li>You must have a newline at the end of the domain name at the end of the CNAME file.</li>
+<li>You must change the CNAME as an actual commit vs. just force pushing an entire history like the DocPad ghpages plugin does.</li>
+</ol>
+<p>I can&#39;t be sure about either one of those as I did them at the same time and it&#39;s possible that GitHub coincidentally updated itself at the same time, if you continue to have trouble it may be worth giving that a shot.</p>
+<p>It probably would have saved me some time if I had actually paid attention to the emails from the GitHub Pages builder with the &quot;Bad CNAME format&quot; warning in them...</p>
+]]></description>
+            <link>http://www.ianbond.net/notes/github_pages_cname.html</link>
+            <guid isPermaLink="true">http://www.ianbond.net/notes/github_pages_cname.html</guid>
+            <dc:creator><![CDATA[Ian Bond]]></dc:creator>
+            <pubDate>Thu, 30 Oct 2014 19:25:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DocPad Setup Notes]]></title>
+            <description><![CDATA[<p>These are some notes about getting DocPad setup in Visual Studio with node.js.</p>
+<ul>
+<li>Create an empty node.js project in directory with docpad site.</li>
+<li>Select project, go to properties window, set &quot;Startup file&quot; to <span class="blog-path">.\node_modules\docpad\bin\docpad</span></li>
+<li>Set &quot;Script arguments&quot; to &quot;run&quot;</li>
+</ul>
+<p>That&#39;s all.</p>
+]]></description>
+            <link>http://www.ianbond.net/notes/docpad_setup.html</link>
+            <guid isPermaLink="true">http://www.ianbond.net/notes/docpad_setup.html</guid>
+            <dc:creator><![CDATA[Ian Bond]]></dc:creator>
+            <pubDate>Sat, 11 Oct 2014 04:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
